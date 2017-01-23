@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #div1 {
+        background: brown;
+        width: 300px
+    }
+
+    .bgRed {
+        background: red;
+    }
+</style>
+<link rel="stylesheet" id="link1" type="text/css">
+<script>
+
+    function over() {
+        var ll = document.getElementById("link1");
+        ll.href = "css1.css"
+
+    }
+    function out() {
+        var ll = document.getElementById("link1");
+        ll.href = "css2.css"
+    }
+    function showOrHide() {
+        var div1 = document.getElementById("div1");
+        var btn1 = document.getElementById("btn1");
+        if (div1.style.display == 'none') {
+            div1.style.display = "block";
+            btn1.className = 'bgRed';
+        } else {
+            div1.style.display = 'none';
+        }
+    }
+</script>
+<body>
+<input id="btn1" type="button" value="皮肤一" onmouseover=over() onmouseout=out() onclick="showOrHide()">
+<input type="button" value="皮肤二" onmouseover=over() onmouseout=out() onclick="showOrHide()">
+<div id="div1" style="display: none" style=width:200px>
+    我爱你中国
+</div>
+</body>
+</html>
